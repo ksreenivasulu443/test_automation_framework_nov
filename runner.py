@@ -23,3 +23,9 @@ for ind, row in testcases.iterrows():
 
     source = read_files(path=row['source_path'],file_type=row['source_type'], header=0, sep=',')
     print(source)
+
+d = {1:'sreenii', 2:'rahul'}
+
+for key, value in d.items():
+    print(key)
+    print(value)
