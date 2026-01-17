@@ -1,5 +1,5 @@
 from utility.read_library import read_db, read_files
-from utility.validations import count_check
+from utility.validations import count_check, duplicate_check, duplicate_check_sql, null_check, data_compare
 import pandas as pd
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
@@ -41,3 +41,8 @@ for ind, row in testcases.iterrows():
     print("target data is", target)
     print("==" * 100)
     count_check(source_df=source, target_df=target)
+    #duplicate_check(target_df=target,pkey_column = row['primary_key'])
+    duplicate_check_sql(target_df=target,pkey_column = row['primary_key'])
+
+    null_check(target_df=target,null_column=row['null_columns'])
+    data_compare(source_df=source, target_df=target)

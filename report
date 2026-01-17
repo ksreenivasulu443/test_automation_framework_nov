@@ -1,0 +1,7 @@
+count_check: PASS Details: count is matching between source and target..source count is 11 and target count is 11
+
+count_check: PASS Details: count is matching between source and target..source count is 11 and target count is 11
+
+duplicate_check: FAIL Details:    IDENTIFIER  count(1)
+0          10         2
+
